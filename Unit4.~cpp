@@ -1,0 +1,53 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+#include <math.h>
+
+#include "Unit4.h"
+#include "Unit1.h"
+#pragma package(smart_init)
+//---------------------------------------------------------------------------
+void Lab1(float zn1,TLabel *L1,TLabel *L2,TLabel *L6,TLabel *L7,AnsiString zn2,AnsiString zn3)
+{
+ L1->Caption=zn1;
+ L2->Caption=zn2;
+ L6->Caption=zn2;
+ L7->Caption=zn3;
+}
+//---------------------------------------------------------------------------
+void Lab2(float zn1,TLabel *L1,TLabel *L2,TLabel *L6,TLabel *L7,TLabel *L8, AnsiString zn2, AnsiString zn3)
+{
+ L1->Caption=zn1;
+ L2->Caption=zn2;
+ L6->Caption=zn2;
+ L7->Caption=zn2;
+ L8->Caption=zn3;
+}
+//---------------------------------------------------------------------------
+void Ramka1(TChart *Ch, float x)
+{
+ Ch->BottomAxis->Minimum=0;
+ Ch->BottomAxis->Maximum=x*10;
+ Ch->BottomAxis->Increment=x;
+}
+//---------------------------------------------------------------------------
+void Ramka2(TChart *Ch, float x)
+{
+ Ch->LeftAxis->Minimum=-x*5;
+ Ch->LeftAxis->Maximum=x*5;
+ Ch->LeftAxis->Increment=x;
+}
+//---------------------------------------------------------------------------
+void skr (TEdit *E1,TEdit *E2,TLabel *L1,TLabel *L2,TBitBtn *B1)
+{
+ E1->Enabled=false;
+ E2->Enabled=false;
+
+ L1->Visible=true;
+ L2->Visible=true;
+
+ B1->Enabled=false;
+}
+//---------------------------------------------------------------------------
+
